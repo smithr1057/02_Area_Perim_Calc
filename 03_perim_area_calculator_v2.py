@@ -26,31 +26,45 @@ def num_check(question):
 
         except ValueError:
             print(error)
-
+            print()
 
 
 
 # Main routine goes here
-width = num_check("Width: ")
-height = num_check("Height: ")
+
+# Introduction / Heading print statements
 print()
-print("Width", width)
-print("Height", height)
+print("***** Area Perimeter Calculator *****")
 print()
+sleep(.9)
 
-# Slow it down a bit
-sleep(1.25)
+# Start of calculator loop
+keep_going = ""
+while keep_going == "":
 
-# calculate area
-area = width * height
+    width = num_check("Width: ")
+    height = num_check("Height: ")
+    print()
 
-# calculate perimeter 
-perimeter = 2 * (width + height)
+    # Slow it down a bit
+    sleep(1.25)
 
-# Output area and perimeter 
-print("Perimeter: {} units".format(perimeter))
-sleep(.75)
+    # calculate area
+    area = width * height
+
+    # calculate perimeter 
+    perimeter = 2 * (width + height)
+
+    # Output area and perimeter 
+    print("Perimeter: {:.2f} units".format(perimeter))
+    sleep(.75)
+    print()
+    print("Area: {:.2f} units".format(area))
+    sleep(.75)
+    print()
+
+    keep_going = input("Press <enter> to keep going or any other key to quit ")
+
 print()
-print("Area: {} units".format(area))
-sleep(.75)
+print("Thanks for using the area / perimeter calculator")
 print()

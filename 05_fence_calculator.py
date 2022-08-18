@@ -1,6 +1,7 @@
 # functions go here
 
 # checks input is a number more than zero
+from time import sleep
 from tkinter.tix import Meter
 
 
@@ -42,15 +43,17 @@ while keep_going == "":
 
     # call your number checker function three times to get the 
     # width, length and cost_per_m of the fencing
+    print()
     width = num_check("Width: ")
-    Height = num_check("Height: ")
+    Length = num_check("Length: ")
     cost_per_m = num_check("Cost per meter: ")
     print()
+    sleep(.5)
 
 
     # Calulate perimeter (width + height) x 2
 
-    perimeter = (width + Height) * 2
+    perimeter = (width + Length) * 2
     
     # Calculate the cost of the fencing (perimeter x price / meter)
 
@@ -58,15 +61,15 @@ while keep_going == "":
 
     # Output the perimeter and cost of the fencing
     print("Perimeter: {:.2f} units".format(perimeter))
+    sleep(.5)
     print()
-    print("Cost: ${:2f}".format(cost))
+    print("Cost: ${:.2f}".format(cost))
+    print()
+    sleep(.4)
     
     
-    keep_going = input("Press <enter> to keep going or any key to quit")
+    keep_going = input("Press <enter> to keep going or any key to quit ")
     
 print()
 print("Thanks for using the Fencing cost calculator")
-
-        
-    
-    
+print()

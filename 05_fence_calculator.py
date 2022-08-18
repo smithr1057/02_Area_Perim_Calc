@@ -42,19 +42,24 @@ while keep_going == "":
 
     # call your number checker function three times to get the 
     # width, length and cost_per_m of the fencing
-    print("replace me with input statements")
+    width = num_check("Width: ")
+    Height = num_check("Height: ")
+    cost_per_m = num_check("Cost per meter: ")
+    print()
+
 
     # Calulate perimeter (width + height) x 2
 
-    perimeter = 2 * (width = height)
+    perimeter = (width + Height) * 2
     
     # Calculate the cost of the fencing (perimeter x price / meter)
 
-    cost = (perimeter * price / Meter)
+    cost = (perimeter * cost_per_m)
 
     # Output the perimeter and cost of the fencing
+    print("Perimeter: {:.2f} units".format(perimeter))
     print()
-    print()
+    print("Cost: ${:2f}".format(cost))
     
     
     keep_going = input("Press <enter> to keep going or any key to quit")
